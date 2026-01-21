@@ -1,0 +1,170 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Main layout */
+main {
+  background: #1f2933;
+  padding: 25px 30px;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+main h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+/* Game board */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Boxes */
+.box {
+  width: 90px;
+  height: 90px;
+  background: #111827;
+  border: none;
+  border-radius: 12px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+h6{
+    text-align: center;
+    opacity: 0.5;
+}
+
+.box:hover {
+  background: #1e293b;
+  transform: scale(1.05);
+}
+
+.box:disabled {
+  cursor: not-allowed;
+}
+
+/* Score section */
+.scroe_mesg {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.scroe_mesg h2 {
+  font-size: 14px;
+  background: #111827;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.xWinner {
+  color: #38bdf8;
+}
+
+.oWinner {
+  color: #f472b6;
+}
+
+.noWinner {
+  color: #facc15;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+}
+
+.reset_btn,
+.new_btn,
+.draw_btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reset_btn {
+  background: #ef4444;
+  color: white;
+}
+
+.reset_btn:hover {
+  background: #dc2626;
+}
+
+.new_btn {
+  background: #22c55e;
+  color: white;
+}
+
+.new_btn:hover {
+  background: #16a34a;
+}
+
+.draw_btn {
+  background: #facc15;
+  color: #111;
+}
+
+.draw_btn:hover {
+  background: #eab308;
+}
+
+/* Winner container */
+.winnerContainer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 100;
+}
+
+.winnerContainer h1 {
+  font-size: 28px;
+  color: #22c55e;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
